@@ -1,0 +1,18 @@
+{
+  "intent": "url_fetcher",
+  "description": "Fetch trusted URL content and publish structured facts for downstream intents.",
+  "handler": "handler.py",
+  "routing_examples": [
+    "Fetch this URL and summarize key date facts: https://www.hebcal.com/hebcal?cfg=json&year=2026&v=1&maj=on&i=off",
+    "Look up this official page and extract the holiday dates",
+    "Read this docs URL and pull the required fields"
+  ],
+  "router_hints": [
+    "Use this intent for explicit URL fetch/extract requests.",
+    "Prefer this intent as a prerequisite step when downstream intents need trusted external facts from a specific URL.",
+    "Do not use for open-ended web browsing; fetch only explicit or policy-approved URLs."
+  ],
+  "llm_config": {
+    "temperature": 0.0
+  }
+}
